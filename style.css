@@ -1,0 +1,139 @@
+/* CSS Variables */
+:root {
+    --cyan:#4abebd;
+    --dark-cyan: #2bb3b1;
+    --yellow: hsl(71, 73%, 54%);
+    --ligth-grey: #d8e5ee;
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+/* HTML & body */
+html {
+    font-family: 'Karla', sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--ligth-grey);
+    padding: 10% 25%;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 100%;
+    min-width: 250px;
+    background-color: white;
+    display: grid;
+    grid-template-areas: 
+        'header header'
+        'left-box right-box';
+    border-radius: 1.5%;
+    overflow: hidden;
+    box-shadow:  20px 20px 60px #b6b6b6, 
+        -20px -20px 60px #f6f6f6;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-area: header;
+    padding: 20px 100px 30px 60px;
+}
+
+header h1{
+    color: var(--dark-cyan);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+header h2 {
+    color: var(--yellow);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: var(--grayish-blue);
+    font-size: 16px;
+    margin-top: 0;
+}
+
+/* Left Box */
+.left-box {
+    background: var(--dark-cyan);
+    display: grid;
+    grid-area: left-box;
+    padding: 20px 50px 40px 50px;
+}
+
+.left-box h3 {
+    margin-bottom: 0;
+}
+
+.price {
+    margin-bottom: -30px;
+    margin-top: 0;
+}
+
+.bigger {
+    font-size: 200%;   
+}
+
+.lighter {
+    color: #98e5ed;
+}
+
+.btn {
+    background: var(--yellow);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: white;
+    color: var(--yellow);
+}
+
+/* Right Box */
+.right-box {
+    background: var(--cyan);
+    display: grid;
+    grid-area: right-box;
+    padding: 20px 50px;
+}
+
+.right-box p{
+    margin-top: 0;
+}
+
+/* Media Queries */
+@media(max-width: 1000px) {
+    .wrapper {
+        grid-template-areas: 
+            'header'
+            'left-box'
+            'right-box';
+    }
+    .price {
+        margin-bottom: -10px;
+        margin-top: 10px;
+    }
+    .btn {
+        padding: 0.7rem;
+    }
+}
+
+@media(max-width: 700px) {
+    body {
+        padding: 10%;
+    }
+}
