@@ -116,6 +116,22 @@ header p {
     margin-top: 0;
 }
 
+/* Footer */
+footer {
+    margin-top: 10vw;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--cyan);
+  }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
 /* Media Queries */
 @media(max-width: 1000px) {
     .wrapper {
